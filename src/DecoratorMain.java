@@ -17,7 +17,18 @@ public class DecoratorMain {
         firstOrder.addFoodItem(new Bacon(burger));
         firstOrder.addFoodItem(drink);
         firstOrder.addFoodItem(fries);
-        System.out.println(firstDiscount.applyDiscount(firstOrder.calculateTotalCost()));
+        System.out.println("Original Total price: " + firstOrder.calculateTotalCost());
+        System.out.println("Discounted Price: " + firstDiscount.applyDiscount(firstOrder.calculateTotalCost()));
+
+        secondOrder.addFoodItem(new Bacon(new Cheese(burger)));
+        secondOrder.addFoodItem(drink);
+        System.out.println("Original Total price: " + secondOrder.calculateTotalCost());
+        System.out.println("Discounted Price: " + secondDiscount.applyDiscount(secondOrder.calculateTotalCost()));
+
+        thirdOrder.addFoodItem(burger);
+        thirdOrder.addFoodItem(fries);
+        System.out.println("Original Total price: " + thirdOrder.calculateTotalCost());
+        System.out.println("Discounted Price: " + thirdDiscount.applyDiscount(thirdOrder.calculateTotalCost()));
 
 
     }
