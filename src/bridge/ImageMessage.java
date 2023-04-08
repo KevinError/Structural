@@ -8,6 +8,6 @@ public class ImageMessage implements MessageType{
     }
 
     public void send() {
-        System.out.println("Send an image message");
+        System.out.println("Send an image message: " + image);
     }
 }

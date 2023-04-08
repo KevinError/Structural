@@ -8,7 +8,7 @@ public class VideoMessage implements MessageType{
     }
 
     public void send(){
-        System.out.println("Sending a video message");
+        System.out.println("Sending a video message: " + video);
     }
 
 
